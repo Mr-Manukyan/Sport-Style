@@ -1,0 +1,177 @@
+.button {
+    position: relative;
+    min-width: 105px;
+    height: 45px;
+    color: #03e9f4;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    background: none;
+    border: none;
+    cursor:url(../../../Assets//Images/cursor.png),pointer;
+    margin-right: 15px;
+    border-radius: 5px;
+    /* -webkit-box-reflect: below 1px linear-gradient(transparent,rgba(0, 0, 0, 0.5)); */
+  }
+  
+  
+  .button span {
+    position: absolute;
+    display: block;
+  }
+  
+  .button span:nth-child(1) {
+    top: 0;
+    left: -100;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear infinite;
+  }
+  @keyframes animate1 {
+    0% {
+      left: -100%;
+    }
+    50%,
+    100% {
+      left: 100%;
+    }
+  }
+  .button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+  }
+  @keyframes animate2 {
+    0% {
+      top: -100%;
+    }
+    50%,
+    100% {
+      top: 100%;
+    }
+  }
+  .button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+  @keyframes animate3 {
+    0% {
+      right: -100%;
+    }
+    50%,
+    100% {
+      right: 100%;
+    }
+  }
+  
+  .button span:nth-child(4) {
+    left: 0;
+    bottom: -100%;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+  @keyframes animate4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,
+    100% {
+      bottom: 100%;
+    }
+  }
+
+  @media screen and (max-width:1920px){
+   .button {
+      min-width: 90px;
+      height: 35px;
+      font-size: 11px;
+   }
+  }
+
+  @media screen and (max-width:1299px){
+    .button {
+       min-width: 70px;
+       height: 30px;
+       font-size: 9px;
+       letter-spacing: 1px;
+    }
+   }
+
+   @media screen and (max-width:1079px){
+    .button {
+       min-width: 65px;
+       height: 30px;
+       font-size: 8px;
+    }
+   }
+
+   
+   @media screen and (max-width:967px){
+    .button {
+       min-width: 70px;
+       height: 35px;
+       font-size: 9px;
+    }
+   }
+   @media screen and (max-width:863px){
+    .button {
+      min-width: 65px;
+      height: 35px;
+    }
+   }
+
+   @media screen and (max-width:719px){
+    .button {
+       min-width: 60px;
+       height: 30px;
+       font-size: 8px;
+    }
+   }
+
+   @media screen and (max-width:479px){
+    .button {
+      margin-top: 10px;
+      margin-left: 5px;
+    }
+   }
+
+   @media screen and (max-width:575px){
+    .button {
+      min-width: 60px;
+      height: 30px;
+      font-size: 8px;
+      font-weight: 0;
+      margin-top: 0px;
+      margin-left: 0px;
+    }
+   }
+
+
+   @media screen and (max-width:320px){
+    .button {
+      min-width: 50px;
+      height: 25px;
+      font-size: 7px;
+      font-weight: 0;
+      margin-top: 0px;
+      margin-left: 0px;
+    }
+   }

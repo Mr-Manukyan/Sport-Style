@@ -1,0 +1,67 @@
+
+
+.menuIcon {
+    display: none;
+    margin-right: 10px;
+}
+
+.bars {
+    display: flex;
+    justify-self:center;
+    align-self: center;
+    color: rgb(193, 236, 247);
+    font-size: 45px;
+}
+.close {
+    display: flex;
+    justify-self:center;
+    align-self: center;
+    color:  rgb(193, 236, 247);
+    font-size: 45px;
+}
+
+
+ @media screen and (max-width: 967px) {
+    .menuIcon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        height: 100%;
+    }
+ }
+
+ @media screen and (max-width: 719px) {
+   .bars{
+    font-size: 40px;
+   }
+   .close {
+    font-size: 40px;
+   }
+ }
+
+ @media screen and (max-width: 575px) {
+    .bars{
+     font-size: 35px;
+    }
+    .close {
+     font-size: 35px;
+    }
+
+  }
+
+  @media screen and (max-width: 319px) {
+    .bars{
+     font-size: 30px;
+    }
+    .close {
+     font-size: 30px;
+    }
+  }
+
+
+
+
+
+
+

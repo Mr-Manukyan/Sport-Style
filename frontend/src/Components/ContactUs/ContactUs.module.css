@@ -1,0 +1,274 @@
+
+.container {
+    width: 100%;
+    height: 87vh;
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    font-family: Open Sans, Arial, sans-serif;
+    font-size: 1.3em;
+  }
+
+  .infoBodyWrapper {
+    width: 70%;
+    height: 55vh;
+    margin-top: 10%;
+    position: relative;  
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.707);
+    border-radius: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+ }
+
+ .logoBody {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .logoLeft{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+ }
+
+ .logoRight{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+ }
+
+ .logoRobot {
+    min-width: 100%;
+ }
+
+ .infoBody{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+
+.authorBody {
+   width: 100%;
+   height: 15%;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 20px;
+}
+
+.profession {
+    color:rgb(249, 186, 0);
+    font-size: 1em;
+}
+.author {
+    color:aliceblue;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+.infoGmailBody {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.gmail {
+    color:rgb(249, 186, 0);
+    font-size: 1em;
+}
+.gmailLink {
+    color:aliceblue;
+    font-size: .9em;
+    margin-left: 10px;
+}
+
+.phoneNumberBody{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.phone {
+    color:rgb(249, 186, 0);
+    font-size: 1em;
+
+}
+.number {
+    color:aliceblue;
+    font-size: .9em;
+    margin-left: 10px;
+}
+
+@media(max-width: 1199px) {
+
+    .profession {
+        font-size: .9em;
+    }
+    .author {
+        font-size: .9em;
+    }
+
+    .gmail {
+        font-size: .9em;
+    }
+    .gmailLink {
+        font-size: .9em;
+    }
+    .phone {
+        font-size: .9em;
+    }
+    .number {
+        font-size: .9em;
+    }
+
+}
+
+@media(max-width: 1079px) {
+
+    .infoBodyWrapper {
+        width: 80%;
+        height: 60vh;
+        margin-top: 13%;
+    }
+}
+
+@media(max-width: 967px) {
+  .infoBodyWrapper{
+    flex-direction: column;
+    width: 65%;
+    justify-content: center;
+    align-items: center;
+  }
+  .logoBody{
+    width:300px;
+    height: 300px;
+  }
+
+ .infoBody{
+    width: 100%;
+    max-height: 30%;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ .authorBody {
+    width: 100%;
+    justify-content: center;
+ }
+ .infoGmailBody {
+    width: 100%;
+    justify-content: center;
+}
+.phoneNumberBody{
+    width: 100%;
+    justify-content: center;
+}
+}
+
+@media(max-width: 575px) {
+
+    .infoBodyWrapper {
+        width: 85%;
+        margin-top: 20%;
+    }
+
+}
+
+@media(max-width: 479px) {
+
+    .profession {
+        font-size: .8em;
+    }
+    .author {
+        font-size: .8em;
+    }
+
+    .gmail {
+        font-size: .8em;
+    }
+    .gmailLink {
+        font-size: .8em;
+    }
+    .phone {
+        font-size: .8em;
+    }
+    .number {
+        font-size: .8em;
+    }
+
+}
+
+@media(max-width: 359px) {
+
+    .profession {
+        font-size: 13px;
+    }
+    .author {
+        font-size: 12px;
+    }
+
+    .gmail {
+        font-size: 13px;
+    }
+    .gmailLink {
+        font-size: 12px;
+    }
+    .phone {
+        font-size: 13px;
+    }
+    .number {
+        font-size: 12px;
+    }
+
+    .logoBody{
+        width:250px;
+        height: 250px;
+    }
+    .infoBodyWrapper {
+        width: 80%;
+        height: 60vh;
+        margin-top: 25%;
+    }
+
+}
+
+
+@media(max-width: 319px) {
+
+    .profession {
+        font-size: 11px;
+    }
+    .author {
+        font-size: 10px;
+    }
+
+    .gmail {
+        font-size: 11px;
+    }
+    .gmailLink {
+        font-size: 10px;
+    }
+    .phone {
+        font-size: 11px;
+    }
+    .number {
+        font-size: 10px;
+    }
+
+}

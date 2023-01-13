@@ -1,0 +1,422 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bodyWrapper {
+    position: relative;
+    display: flex;
+    width: 80%;
+    max-height: 68%;
+    flex-direction: column;
+    align-self: center;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    border: 1px solid #b3c000;
+}
+
+.bodyWrapperEmpty {
+    /* position: relative; */
+    display: flex;
+    width: 60%;
+    min-height: 40%;
+    flex-direction: column;
+    align-self: center;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    border: 1px solid #b3c000;
+}
+
+.infoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;   
+    border-bottom: 2px solid #b3c000;
+    padding-bottom: 10px;
+    width: 95%;
+    margin: 0 auto;
+ }
+.numberInfo {
+    color: rgb(60, 255, 0);
+    font-size: 16px;
+}
+.removeOrder {
+    color: rgb(255, 53, 53);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dateInfo {
+    color: rgb(255, 216, 44);
+    font-size: 16px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.dateInfo span {
+    margin-left: 3px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.timeInfo {
+    color: rgb(251, 255, 21);
+    font-size: 16px;
+}
+.moneyInfo {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+}
+.moneyInfo span {
+    margin-left: 3px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(60, 255, 0);
+    font-size: 14px;
+}
+.date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 216, 44);
+    font-size: 14px;
+}
+.time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(251, 255, 21);
+    font-size: 14px;
+}
+.money {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+}
+
+.remove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 108, 108);
+    font-size: 20px;
+    padding: 3px;
+}
+
+
+.remove span {
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.cartWrapper {
+    background: rgba(224, 224, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.cart {
+    color:  rgb(230, 230, 230);
+    font-size: 2rem;  
+    margin-right: 10px; 
+    margin: 5px;
+}
+
+.paragraph {
+    color:rgb(255, 255, 255);
+    text-shadow: 2px 1px 1px  rgb(39, 39, 38);
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    
+}
+
+.button {
+    width: 15%;
+    min-width: 150px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color:#eeff00;
+    text-align: center;
+    border-radius: 10px;
+    background: rgb(0, 135, 0);
+    border: 1px solid #b3c000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-bottom:20px;
+    
+}
+
+.totalPriceContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.totalPriceWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-items:center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.totalPrice {
+    font-size: 18px;
+    color: white;
+}
+
+.removeButtonWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 20px 0px;
+}
+.removeAllOrder {
+    justify-items: center;
+    border: 1px solid #b3c00089;
+    background-color: rgba(192, 37, 37, 0.52);
+    border-radius: 5px;
+    color:white;
+    font-size: 10px;
+    letter-spacing: 1px;
+    width: 20%;
+    min-width:200px;
+    padding: 10px 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+}
+
+.textInfo {
+    margin:auto auto;
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    text-shadow: 1px 1px 1px orange;
+    letter-spacing: 1px;
+}
+
+.searchByPriceWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+.searchByPriceBody {
+    position: absolute;
+    display: flex;
+    width: 45%;
+    height: 40%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    border: 1px solid #b3c000;
+}
+
+.searchByDateWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+.searchByDateBody {
+    position: absolute;
+    display: flex;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    border: 1px solid #b3c000;
+}
+
+.logoBackBody {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 70px;
+    height: 35px;
+    cursor: pointer;
+}
+.logoBack {
+  max-width: 100%;
+}
+
+@media(max-width: 863px) {
+    .searchByPriceBody {
+        width: 60%;
+    }
+}
+
+
+
+@media(max-width: 719px) {
+
+    .bodyWrapper {
+        width: 90%;
+    }
+}
+
+@media(max-width: 639px) {
+    .searchByPriceBody {
+        width: 70%;
+    }
+
+    .bodyWrapperEmpty {
+        width: 80%;
+        min-height: 40%;
+    }
+}
+
+@media(max-width: 575px) {
+
+    .paragraph {
+        font-size: 1rem;   
+    }
+    .cart {
+        font-size: 1.5rem;  
+    }
+   .textInfo{
+    font-size: 16px;
+    text-shadow: 1px 1px 1px orange;
+ 
+   }
+   .logoBackBody {
+    width: 60px;
+    height: 35px;
+}
+}
+
+
+
+@media(max-width: 479px) {
+
+    .numberInfo {
+        font-size: 14px;
+    }
+    .removeOrder {
+        font-size: 14px;
+    }
+    .dateInfo {
+        font-size: 14px;
+    }
+    .dateInfo span {
+        font-size: 20px;
+    }
+    .timeInfo {
+        font-size: 14px;
+    }
+    .moneyInfo {
+        font-size: 14px;
+    }
+    .moneyInfo span {
+        font-size: 20px;
+    }
+
+    .totalPrice {
+        font-size: 15px;
+    }
+
+    .removeAllOrder {
+        font-size: 8px;
+        width: 20%;
+        min-width:135px;
+        padding: 8px 5px;
+        font-weight: 600;  
+    }
+    .searchByPriceBody {
+        width: 75%;
+    }
+
+    .logoBackBody {
+        width: 50px;
+        height: 30px;
+    }
+
+}
+
+@media(max-width: 383px) {
+
+    .paragraph {
+        font-size: .8rem;   
+    }
+    .cart {
+        font-size: 1.2rem;  
+    }
+  .textInfo{
+        font-size: 14px;
+       }
+       .bodyWrapperEmpty {
+        width: 90%;
+    }
+    .removeAllOrder {
+        font-size: 7px;
+        min-width:125px;
+    }
+    .logoBackBody {
+        width: 40px;
+        height: 25px;
+    }
+}
+
+@media(max-width: 319px) {
+
+    .totalPrice {
+        font-size: 13px;
+    }
+    .textInfo{
+        font-size: 12px;
+    }
+    .logoBackBody {
+        width:35px;
+        height: 25px;
+    }
+}
+

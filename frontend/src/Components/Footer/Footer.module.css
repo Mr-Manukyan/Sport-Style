@@ -1,0 +1,77 @@
+.footerContainer{
+	width: 100%;
+    height: 13vh;
+    box-shadow: 0 0 3px #000000;
+    background-image: url('../../Assets/Images/blackKarbon.webp');
+    background-size: 100%;
+    background-repeat: no-repeat;
+	display: flex;
+    flex-direction: column;
+	justify-content:space-between;	
+    align-items: center;
+    z-index: 1010;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.socialWebIconWrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.copyrightIconWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.copyright {
+    color: red;
+    font-size: 20px;
+    margin-right: 5px;
+    text-align: center;
+}
+.copyrightText {
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media screen and (max-width:575px) {
+    .copyright {
+        font-size: 16px;
+    }
+    .copyrightText {
+        font-size: 10px;
+    }
+}
+
+  @media screen and (max-width:419px) {
+    .copyright {
+        font-size: 14px;
+    }
+    .copyrightText {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width:299px) {
+    .copyright {
+        font-size: 12px;
+    }
+    .copyrightText {
+        font-size: 7px;
+    }
+}
+
+
+
+

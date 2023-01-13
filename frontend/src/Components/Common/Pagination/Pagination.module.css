@@ -1,0 +1,151 @@
+.buttonPageWrapper{
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+    z-index: 1000;
+    margin-bottom: 10px;
+  }
+
+  .buttonCurrentPage {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(241, 22, 33, 0.5);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius:10px;
+    color: white;
+    font-size: 18px;
+    margin: 8px;
+    cursor: pointer;
+  }
+
+  
+.buttonPage {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius:10px;
+    color: white;
+    font-size: 15px;
+    margin: 8px;
+    cursor: pointer;
+}
+.buttonPage:hover {
+  background: rgba(72, 255, 0, 0.5);
+}
+
+.prev{
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius:10px;
+  color: rgb(255, 213, 0);
+  font-size: 13px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.prev:hover {
+  background: rgba(255, 251, 0, 0.5);
+  color: #fff;
+}
+
+
+.next{
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius:10px;
+  color: rgb(255, 213, 0);
+  font-size: 13px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.next:hover {
+  background: rgba(255, 251, 0, 0.5);
+  color: #fff;
+}
+
+@media(max-width: 575px) {
+  
+  .buttonCurrentPage {
+    width: 40px;
+    height: 40px;
+    border-radius:10px;
+    font-size: 18px;
+    margin: 8px;
+  }
+
+  
+.buttonPage {
+    width: 40px;
+    height: 40px;
+    border-radius:10px;
+    font-size: 15px;
+    margin: 8px;
+}
+
+.prev{
+  width: 40px;
+  height: 40px;
+  border-radius:10px;
+  font-size: 13px;
+  margin-right: 8px;
+}
+
+.next{
+  width: 40px;
+  height: 40px;
+  border-radius:10px;
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+
+}
+
+@media(max-width: 319px) {
+  
+  .buttonCurrentPage {
+    width: 35px;
+    height: 35px;
+    border-radius:7px;
+    font-size: 16px;
+    margin: 5px;
+  }
+
+  
+.buttonPage {
+    width: 35px;
+    height: 35px;
+    border-radius:7px;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.prev{
+  width: 35px;
+  height: 35px;
+  border-radius:7px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.next{
+  width: 35px;
+  height: 35px;
+  border-radius:7px;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+
+}

@@ -1,0 +1,223 @@
+.orderWrapper {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    min-width: 100%;
+   
+}
+
+
+.nameWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sizeWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.size {
+    color: white;
+    text-shadow: 0 0 2px black;
+    text-align: center;
+    font-size: 16px;
+}
+
+.nameWrapper img {
+    width: 65px;
+    border-radius: 10px;
+}
+
+.priceWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.priceQuantityWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.quantityWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    color: white;
+    text-shadow: 0 0 2px black;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.price {
+    color: white;
+    text-align: center;
+}
+.priceQuantity {
+    color: white;
+    text-shadow: 0 0 2px black;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.currency {
+    color: white;
+    text-align: center;
+    margin-left: 3px;
+    font-size: 12px;
+    text-shadow: 0 0 1px black;
+}
+
+
+.minusWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    background-color: black;
+    border-radius: 50%;
+  }
+  .minus {
+    color: yellow;
+    font-size: 20px;
+    cursor: pointer;
+}
+.plusWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    background-color: black;
+    border-radius: 50%;
+  }
+
+  .plus {
+    color: rgb(0, 255, 42);
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.closeOrder {
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 52, 52);
+    font-size: 20px;
+    padding: 3px;
+}
+
+@media(max-width: 719px) {
+    .name {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+    .nameWrapper img {
+        width: 60px;
+    }
+    .priceQuantity {
+        font-size: 1em;
+    }
+    
+    .currency {
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 539px) {
+    .name {
+        font-size: 8px;
+    }
+    .nameWrapper img {
+        width: 50px;
+    }
+    .priceQuantity {
+        font-size: 0.8em;
+    }
+    
+    .currency {
+        font-size: 8px;
+    }
+
+    .closeOrder {
+
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .plus {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .plusWrapper {
+        margin-left: 5px;
+    }
+    .minusWrapper {
+        margin-right: 5px;
+    }
+
+    .minus {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .quantity {
+        font-size: 15px;
+    }
+    .size {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 384px) {
+    
+    .name {
+        font-size: 7px;
+    }
+    .nameWrapper img {
+        width: 40px;
+    }
+    .priceQuantity {
+        font-size: 0.8em;
+    }
+    
+    .currency {
+        font-size: 7px;
+    }
+
+    .closeOrder {
+        font-size: 16px;
+    }
+
+    .plus {
+        font-size: 16px;
+    }
+
+    .minus {
+        font-size: 16px;
+    }
+    .quantity {
+        font-size: 13px;
+    }
+    .size {
+        font-size: 13px;
+    }
+}

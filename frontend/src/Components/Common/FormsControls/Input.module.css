@@ -1,0 +1,108 @@
+.inputWrapper {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+
+
+}
+
+.input {
+    width: 100%;
+    min-width: 200px;
+    min-height: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.707);
+    outline: 0;
+    padding: 1rem;
+    box-shadow: none;
+    color: rgb(255, 255, 255);
+    background: black;
+    position: relative;
+    font-size: 18px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+}
+
+:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: rgba(255, 249, 158, 0.493);
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.errorWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.errorMessage {
+
+    color: rgb(255, 140, 140);
+    text-shadow: 1px 1px 1px rgb(51, 0, 0);
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 0.5em 0.5em;
+
+}
+
+@media screen and (max-width:1079px) {
+    .errorMessage {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+    }
+}
+
+@media screen and (max-width:639px) {
+    .errorMessage {
+        font-size: 14px;
+        letter-spacing: 1px;
+        padding: 0.5em 1em;
+    }
+}
+
+@media screen and (max-width:539px) {
+    .input {
+        width: 100%;
+        min-width: 200px;
+        min-height: 50px;
+        font-size: 14px;
+    }
+    .errorMessage {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (max-width:479px) {
+
+    .errorWrapper {
+        width: 100%;
+        min-width: 200px;
+        padding: 0.2em 0.2em;
+    }
+    .errorMessage {
+        font-size: 11px;
+    }
+
+}
+
+
+@media screen and (max-width:389px) {
+
+    .errorMessage {
+        font-size: 9px;
+    }
+
+}

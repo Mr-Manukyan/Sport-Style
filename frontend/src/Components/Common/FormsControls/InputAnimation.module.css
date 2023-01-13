@@ -1,0 +1,204 @@
+.inputField {
+  position: relative;
+  width: 250px;
+  height: 44px;
+  line-height: 44px;
+  margin-bottom: 40px;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #d3d3d3;
+  transition: 0.2s all;
+  cursor: text;
+  font-size: 18px;
+}
+
+.input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #d3d3d3;
+  box-shadow: none;
+  color: rgb(255, 255, 255);
+  background: black;
+  position: relative;
+  font-size: 14px;
+}
+
+.input:focus {
+  color: white;
+  border-color: #00dd22;
+  transition: .4s;
+}
+
+.input:focus~.label {
+  font-size: 14px;
+  top: -30px;
+  color: #00dd22;
+  transition: .4s;
+}
+
+
+.inputError {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #ff391b;
+  box-shadow: none;
+  background: black;
+  position: relative;
+  outline: 0;
+  font-size: 14px;
+
+}
+
+.labelError {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  transition: 0.4s all;
+  cursor: text;
+  color: #ff391b;
+  font-size: 14px;
+}
+
+.inputError:focus {
+  color: white;
+  transition: .4s;
+}
+
+.inputError:focus~.labelError {
+  position: absolute;
+  font-size: 14px;
+  top: -30px;
+  color: #ff391b;
+  transition: .4s;
+}
+
+.labelActive {
+  position: absolute;
+  font-size: 14px;
+  left: 0;
+  top: -30px;
+  color: #00dd22;
+  transition: .4s;
+}
+
+
+.errorWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorMessage {
+  color: rgb(255, 140, 140);
+  text-shadow: 1px 1px 1px rgb(51, 0, 0);
+  font-size: 13px;
+  letter-spacing: 1px;
+
+}
+
+@media screen and (max-width:479px) {
+  .inputField {
+    width: 200px;
+  }
+
+  .label {
+    font-size: 15px;
+  }
+
+  .input {
+    font-size: 12px;
+  }
+
+  .input:focus~.label {
+    font-size: 12px;
+  }
+
+  .inputError {
+    font-size: 12px;
+
+  }
+
+  .input:focus~.label {
+    font-size: 12px;
+  }
+
+
+  .inputError {
+    font-size: 12px;
+  }
+
+  .labelError {
+    font-size: 12px;
+  }
+
+  .inputError:focus~.labelError {
+    font-size: 12px;
+  }
+
+  .labelActive {
+    font-size: 12px;
+  }
+
+  .errorMessage {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width:319px) {
+  .inputField {
+    width: 170px;
+  }
+
+  .label {
+    font-size: 15px;
+  }
+
+  .input {
+    font-size: 12px;
+  }
+
+  .input:focus~.label {
+    font-size: 12px;
+  }
+
+  .inputError {
+    font-size: 12px;
+
+  }
+
+  .input:focus~.label {
+    font-size: 12px;
+  }
+
+
+  .inputError {
+    font-size: 12px;
+  }
+
+  .labelError {
+    font-size: 12px;
+  }
+
+  .inputError:focus~.labelError {
+    font-size: 12px;
+  }
+
+  .labelActive {
+    font-size: 12px;
+  }
+
+  .errorMessage {
+    font-size: 11px;
+  }
+}

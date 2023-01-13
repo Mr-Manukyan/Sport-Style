@@ -1,0 +1,325 @@
+.itemIcon {
+    display: none;
+}
+
+.navLinks {
+  width:200px;
+  height: 70px;
+   position: relative;
+   color: #fff;
+   font-size: 1em;
+   letter-spacing:1px;
+   text-decoration: none;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   background: rgba(0, 0, 0, 0.411);
+   overflow: hidden;
+}
+
+.linkWrapper {
+    list-style: none;
+}
+
+.activeLink {
+  width:200px;
+  height: 70px;
+  color: #e4f403;
+  font-size: 1.1em;
+  letter-spacing:1px;
+  text-decoration: none;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.411);
+  border-top: 3px solid rgba(235, 235, 235, 0.753);
+  font-weight: 600;
+}
+ul li:first-child .activeLink {
+    border-top-left-radius: 30px;
+    border-left: 3px solid rgba(235, 235, 235, 0.753);
+}
+
+ul li:nth-child(4) .activeLink {
+  border-top-right-radius: 30px;
+  border-right: 3px solid rgba(235, 235, 235, 0.753);
+}
+
+ul li:first-child .navLinks {
+    border-top-left-radius: 30px;
+    border-left: 3px solid rgba(235, 235, 235, 0.753);
+    border-top: 3px solid rgba(235, 235, 235, 0.753);
+  }
+  ul li:nth-last-child(2) .navLinks {
+   border-top-right-radius: 30px;
+   border-right: 3px solid rgba(235, 235, 235, 0.753);
+   border-top: 3px solid rgba(235, 235, 235, 0.753);
+ }
+ ul li:nth-last-child(3) .navLinks {
+   border-top: 3px solid rgba(235, 235, 235, 0.753);
+ }
+ ul li:nth-last-child(4) .navLinks {
+   border-top: 3px solid rgba(235, 235, 235, 0.753);
+ }
+
+ul li:nth-child(1):hover .navLinks{
+  color: #0f0;
+  font-weight: 500;
+  transition: all 1s ease;
+}
+ ul li:nth-last-child(2):hover .navLinks{
+  color: #5d65ff;
+  font-weight: 500;
+  transition: all 1s ease;
+}
+ul li:nth-last-child(3):hover .navLinks{
+  color: #ff0;
+  font-weight: 500;
+  transition: all 1s ease;
+}
+ul li:nth-last-child(4):hover .navLinks{
+  color: #ff308f;
+  font-weight: 500;
+  transition: all 1s ease;
+}
+
+
+@media screen and (max-width: 1919px){
+
+  .navLinks {
+    width:160px;
+    height: 60px;
+    font-size: 0.8em;
+  }
+  .activeLink {
+    width:160px;
+    height: 60px;
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+
+
+
+}
+
+@media screen and (max-width: 1619px){
+
+  .navLinks {
+    width:130px;
+    height: 40px;
+    font-size: 0.7em;
+  }
+  .activeLink {
+    width:130px;
+    height: 40px;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+
+  .linkWrapper {
+    width: 140px;
+  }
+
+}
+
+@media screen and (max-width: 1299px){
+
+  .navLinks {
+    width:110px;
+    height: 40px;
+    font-size: 0.6em;
+  }
+  .activeLink {
+    width:110px;
+    height: 40px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+
+  .linkWrapper {
+    width: 120px;
+  }
+
+}
+
+
+@media screen and (max-width: 1079px){
+
+  .navLinks {
+    width:100px;
+    height: 40px;
+    font-size: 0.6em;
+  }
+  .activeLink {
+    width:100px;
+    height: 40px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+
+  .linkWrapper {
+    width: 110px;
+  }
+
+}
+
+
+@media screen and (max-width: 967px){
+
+    .linkWrapper{
+      width: 100%;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .navLinks {
+        width: 300px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#fafafa;
+        position: relative;
+        font-size: 1.1em;
+        letter-spacing: 3px;
+        font-weight: 500;
+        text-decoration: none;
+     }
+
+     .activeLink {
+      width:300px;
+      height: 70px;
+      color: #e4f403;
+      font-size: 1.1em;
+      letter-spacing:1px;
+      text-decoration: none;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.411);
+      border-top: 3px solid rgba(235, 235, 235, 0.753);
+      font-weight: 600;
+    }
+    ul li:first-child .activeLink {
+        border-left: 3px solid #e4f403;
+        border-right: 3px solid#e4f403;
+        border-top-left-radius:0px;
+        border-top: none;
+    }
+
+    ul li:nth-child(2) .activeLink {
+      border-left: 3px solid #e4f403;
+      border-right: 3px solid#e4f403;
+      border-top: none;
+    }
+    ul li:nth-child(3) .activeLink {
+      border-left: 3px solid#e4f403;
+      border-right: 3px solid#e4f403;
+      border-top: none;
+    }
+    
+    ul li:nth-child(4) .activeLink {
+      border: none;
+      border-left: 3px solid #e4f403;
+      border-right: 3px solid#e4f403;
+      border-top-right-radius:0px;
+    }
+    
+    ul li:first-child .navLinks {
+      border-top-left-radius:0px;
+       border-top: none;
+       border-right: 3px solid rgba(235, 235, 235, 0.753);
+      }
+      ul li:nth-child(2) .navLinks {
+        border-top-right-radius:0px;
+        border: none;
+        border-left: 3px solid rgba(235, 235, 235, 0.753);
+        border-right: 3px solid rgba(235, 235, 235, 0.753);
+
+     }
+     ul li:nth-child(3) .navLinks {
+       border: none;
+       border-left: 3px solid rgba(235, 235, 235, 0.753);
+       border-right: 3px solid rgba(235, 235, 235, 0.753);
+     }
+     ul li:nth-child(4) .navLinks {
+      border-top-right-radius:0px;
+      border: none;
+      border-left: 3px solid rgba(235, 235, 235, 0.753);
+      border-right: 3px solid rgba(235, 235, 235, 0.753);
+
+     }
+   
+}
+
+
+@media screen and (max-width: 719px){
+
+  .navLinks {
+      width: 250px;
+      height: 70px;
+      font-size: 0.9em;
+      letter-spacing: 2px;
+   }
+
+   .activeLink {
+    width:250px;
+    height: 70px;
+    font-size: 1em;
+    letter-spacing:3px;
+    font-weight: 500;
+  }
+
+}
+
+
+@media screen and (max-width: 479px){
+
+  .linkWrapper{
+    height: 60px;
+  }
+
+  .navLinks {
+      width: 220px;
+      height: 60px;
+      font-size: 0.8em;
+      letter-spacing: 2px;
+   }
+
+   .activeLink {
+    width:220px;
+    height: 60px;
+    font-size: 0.9em;
+    letter-spacing:3px;
+    font-weight: 500;
+  }
+
+}
+
+
+@media screen and (max-width: 319px){
+
+  .linkWrapper{
+    height: 60px;
+  }
+
+  .navLinks {
+      width: 170px;
+      height: 50px;
+      font-size: 0.7em;
+      letter-spacing: 2px;
+   }
+
+   .activeLink {
+    width:170px;
+    height: 50px;
+    font-size: 0.8em;
+    letter-spacing:3px;
+    font-weight: 500;
+  }
+
+}
+

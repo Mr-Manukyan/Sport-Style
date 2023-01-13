@@ -1,0 +1,35 @@
+.btn {
+    font-size: 16px;
+    font-family: monospace;
+    color: #fff;
+    background: linear-gradient(to left, #1a8100, #c5bb00, #c20000);
+    padding: 0.6em .8em;
+    border: none;
+    border-radius: 5px;
+    background-size: 200%;
+    transition: 0.5s;
+    cursor:url(../../../Assets//Images/cursor.png),pointer;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  
+  .btn:hover {
+    background-position: right;
+  }
+
+  @media screen and (max-width:1199px) {
+    .btn {
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+  }
+
+
+
+  @media screen and (max-width:719px) {
+    .btn {
+      font-size: 10px;
+    }
+  }
+
+  

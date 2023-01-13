@@ -1,0 +1,47 @@
+.container {
+    width: 100%;
+    min-height: 87vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orderContainer {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    max-height: 35vh;
+    overflow-y: auto;
+  
+} 
+
+.wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 70px;
+   width: 80%;
+   border: 1px solid #b3c000;
+   border-radius: 10px;
+   margin-bottom: 10px;
+}
+
+@media(max-width: 719px) {
+    .wrapper {
+        width: 90%;
+     }
+    
+}
+
+
+
+
+
+
+
+
+
+

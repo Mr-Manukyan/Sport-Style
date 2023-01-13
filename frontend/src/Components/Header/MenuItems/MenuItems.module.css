@@ -1,0 +1,135 @@
+.navMenu {
+    display: flex;
+    list-style: none;
+    position: relative;
+    justify-content:center;
+    align-items: center;
+}
+
+
+  .indicator {
+    position: absolute;
+    left:0%;
+    z-index:1;
+    border-radius: 4px;
+    transition: 0.6s;
+ 
+  }
+
+  .indicator::before{
+    content: '';
+    position: absolute;
+    top: 35px;
+    width:200px;
+    height:2px;
+    transition: 0.6s;
+    background: #0f0;
+    box-shadow: 0 0 10px #0f0,
+                0 0 20px #0f0,
+                0 0 30px #0f0,
+                0 0 40px #0f0;
+   
+  }
+
+  
+  ul li:nth-child(2):hover ~ .indicator::before{
+    background: #ff308f;
+    box-shadow: 0 0 10px #ff308f,
+                0 0 20px #ff308f,
+                0 0 30px #ff308f,
+                0 0 40px #ff308f;
+  }
+  ul li:nth-child(3):hover ~ .indicator::before{
+  
+    background: #ff0;
+    box-shadow: 0 0 10px #ff0,
+                0 0 20px #ff0,
+                0 0 30px #ff0,
+                0 0 40px #ff0;
+  }
+  ul li:nth-child(4):hover ~ .indicator::before{
+    background: #5d5dff;
+    box-shadow: 0 0 10px #5d5dff,
+                0 0 20px #5d5dff,
+                0 0 30px #5d5dff,
+                0 0 40px #5d5dff;
+  }
+
+@media screen and (max-width: 1919px){
+
+  .indicator::before{
+    content: '';
+    width:160px;
+    top: 30px;
+  }
+
+}
+
+@media screen and (max-width: 1619px){
+
+  .indicator::before{
+    content: '';
+    width:130px;
+    top: 20px;
+  }
+
+}
+
+@media screen and (max-width: 1299px){
+
+  .indicator::before{
+    content: '';
+    width:110px;
+    top: 20px;
+  }
+
+}
+
+@media screen and (max-width: 1079px){
+
+  .indicator::before{
+    content: '';
+    width:100px;
+  }
+
+}
+
+  
+@media screen and (max-width:967px){
+    .navMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        position: absolute;
+        min-width: 100%;
+        min-height: 70vh;
+        top :15vh;
+        left: -100%;
+        opacity: 0;
+        transition: all .3s ease;
+        border-top: 1px solid #e4f403;
+        border-bottom: 1px solid #e4f403;
+        background: #4d5200;
+        z-index: 9999999;
+    }
+    .navMenu.active {
+        background:url(../../../Assets//Images/blackKarbon.webp);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        left: 0;
+        opacity: 1;
+        transition: all .3s ease;
+        z-index: 9999999;
+    }
+    .indicator {
+      display: none;
+    }
+
+}
+
+
+@media screen and (max-width:719px){
+  .navMenu {
+      top :13vh;
+  }
+}

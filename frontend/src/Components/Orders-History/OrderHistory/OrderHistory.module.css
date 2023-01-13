@@ -1,0 +1,310 @@
+.historyOrdersWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 92%;
+    background: rgba(146, 146, 39, 0.1);
+    border-radius: 10px;
+    border: 1px solid #ffffff5b;
+    padding:1em 0em;
+    cursor:pointer;
+    z-index: 5;
+    margin-top: 10px;
+
+}
+
+.bbb {
+    position:absolute;
+    width: 60%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(197, 0, 0, 0.9);
+    z-index: 1000;
+}
+
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(60, 255, 0);
+    font-size: 14px;
+}
+.date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 216, 44);
+    font-size: 14px;
+}
+.time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(251, 255, 21);
+    font-size: 14px;
+}
+.money {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+}
+
+.remove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 108, 108);
+    font-size: 20px;
+}
+
+.remove span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+/* history */
+
+.historyWrapper {
+    position: relative;
+    width: 100%;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.orderNumberWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+}
+
+.historyBodyWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.orderNumber {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.fieldNumber {
+    color: red;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+.historyBodyInfoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.historyBodyInfoWrapper {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #03e9f4;
+}
+.historyBodyInfoWrapper span {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+.historyBodyInfoWrapper span:nth-child(2) {
+    color: rgb(255, 30, 30);
+}
+.historyBodyInfoWrapper span:nth-child(3) {
+    color: rgb(30, 90, 255);
+}
+.historyBodyInfoWrapper span:nth-child(4) {
+    color: rgb(255, 203, 30);
+}
+
+.historyBody {
+    display: flex;
+    width: 90%;
+    border: 1px solid #03e9f4;
+    align-items: center;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+.historyBody span{
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  padding: 10px;
+}
+
+.historyBody img {
+    max-width: 35px;
+}
+.historyBody span:nth-child(3) {
+    color: rgb(30, 90, 255);
+}
+.historyBody span:nth-child(4) {
+    color: rgb(255, 203, 30);
+}
+
+.removeOrder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: red;
+}
+.closeModal {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        align-items: center;
+        color: rgb(255, 0, 0);
+        font-size: 25px;
+        cursor: pointer;
+        top: 10px;
+        right: 10px;
+    
+}
+
+/* enptyContainer */
+
+.enptyContainerWrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .enptyContainer {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    height: 50vh;
+    align-self: center;
+    z-index: 1;
+    margin-bottom: 30px;
+    margin-top: 150px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.678);
+    border-radius: 20px;
+    border: 2px solid #03e8f465;
+}
+
+
+.paragraph {
+    color:rgb(255, 172, 19);
+    text-shadow: 2px 1px 1px  rgb(39, 39, 38);
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    
+}
+
+.textInfo {
+    margin:auto auto;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    text-shadow: 1px 1px 1px orange;
+}
+
+img.enptyContainerLogo {
+    max-width: 100px;
+    position: absolute;
+    top:-15%;
+    left:-3%;
+   
+}
+
+@media(max-width: 479px) {
+    .time {
+        font-size: 11px;
+    }
+    .money {
+        font-size: 11px;
+    }
+    
+    .remove {
+        font-size: 15px;
+    }
+    .number {
+        font-size: 11px;
+    }
+    .date {
+        font-size: 11px;
+    }
+    .historyOrdersWrapper {
+        width: 94%;
+    }
+}
+
+@media(max-width: 319px) {
+    .time {
+        font-size: 10px;
+    }
+    .money {
+        font-size: 10px;
+    }
+    
+    .remove {
+        font-size: 14px;
+    }
+    .number {
+        font-size: 10px;
+    }
+    .date {
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

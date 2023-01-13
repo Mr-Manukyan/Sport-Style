@@ -1,0 +1,48 @@
+.form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.paragraph {
+    color: #f0f403;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance:none;
+    margin-top:0;
+}
+
+
+@media(max-width: 863px) {
+    .paragraph {
+      font-size: 14px;
+
+    }
+}
+
+@media(max-width: 479px) {
+    .paragraph {
+      font-size: 12px;
+
+    }
+}
+
+@media(max-width: 359px) {
+    .paragraph {
+      font-size: 10px;
+    }
+}
+
+@media(max-width: 319px) {
+    .paragraph {
+      font-size: 9px;
+    }
+}

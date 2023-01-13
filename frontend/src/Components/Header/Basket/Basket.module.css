@@ -1,0 +1,156 @@
+.basketWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+
+.basket {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+  }
+  .infoQuantity {
+    position: absolute;
+    left: -16px;
+    top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+    color: white;
+    background: red;
+    border-radius: 50%;
+  }
+
+  .image {
+    width: 70px;
+  }
+
+  @media screen and (max-width:1920px){
+    .image {
+      width: 60px;
+      margin-right: 20px;
+    }
+    .infoQuantity {
+      left: -16px;
+      top: 8px;
+      width: 30px;
+      height: 30px;
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width:1299px){
+    .image {
+      width: 50px;
+    }
+    .infoQuantity {
+      left: -16px;
+      top: 8px;
+      width: 28px;
+      height: 28px;
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width:1079px){
+    .image {
+      width: 40px;
+    }
+    .infoQuantity {
+      left: -16px;
+      top: 0px;
+      width: 26px;
+      height: 26px;
+      font-size: 13px;
+    }
+  }
+
+  @media screen and (max-width:967px){
+    .image {
+      width: 60px;
+    }
+    .infoQuantity {
+      left: -16px;
+      top: 5px;
+      width: 30px;
+      height: 30px;
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (max-width:863px){
+    .image {
+      width: 50px;
+    }
+    .infoQuantity {
+      left: -16px;
+      top: 5px;
+      width: 28px;
+      height: 28px;
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width:719px){
+    .image {
+      width: 40px;
+    }
+    .infoQuantity {
+      left: -16px;
+      top: 2px;
+      width: 24px;
+      height: 24px;
+      font-size: 13px;
+    }
+  }
+
+
+
+  @media screen and (max-width: 590px){
+
+   .basket {
+     font-size: 25px;
+   }
+   .basketWrapper {
+    margin-right: 15px;
+    margin-left: 10px;
+  }
+ 
+}
+
+@media screen and (max-width:575px){
+  .image {
+    width: 40px;
+    margin-left: 10px;
+  }
+  .infoQuantity {
+    left: -4px;
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width:319px){
+  .image {
+    width: 30px;
+  }
+  .infoQuantity {
+    left: -3px;
+    top: 1px;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+  }
+}
+
+
+
+
+

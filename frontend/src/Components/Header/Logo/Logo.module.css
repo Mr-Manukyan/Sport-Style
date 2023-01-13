@@ -1,0 +1,161 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-items: start;
+    background-size: cover; 
+    width: 100%;
+}
+
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    cursor: pointer;
+    width: 400px;
+    font-size: 25px;
+}
+
+
+.paragraphWrapper .logo {
+    width: 120px;
+}
+
+@media screen and (max-width: 1920px) {
+
+    .paragraphWrapper .logo {
+        width: 100px;
+    }
+
+    .link {
+        width: 310px;
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1620px) {
+
+    .paragraphWrapper .logo {
+        width: 80px;
+    }
+
+    .link {
+        width: 280px;
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 1299px) {
+    .paragraphWrapper .logo {
+        width: 70px;
+    }
+    .link {
+        width: 250px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1079px) {
+    .paragraphWrapper .logo {
+        width: 60px;
+    }
+    .link {
+        width: 210px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 967px) {
+    .paragraphWrapper .logo {
+        width: 120px;
+    }
+    .link {
+        width: 350px;
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 863px) {
+    .paragraphWrapper .logo {
+        width: 100px;
+    }
+    .link {
+        width: 310px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 719px) {
+    .paragraphWrapper .logo {
+        width: 80px;
+    }
+    .link {
+        width: 250px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    
+    .link{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: 17px;
+        margin-left: 5px;
+    }
+
+    .wrapper{
+        position: absolute;
+        top: 12px;  
+        left: 30px;
+    }
+
+    .paragraphWrapper{
+        position: relative;
+    }
+
+
+    .paragraphWrapper .logo {
+       width: 45px;
+       position: absolute;
+       left: -35px;
+       top: -16px;
+    }  
+}
+
+
+@media screen and (max-width: 479px) {
+
+    .link{
+        font-size: 13px;
+    }
+    .paragraphWrapper .logo {
+        left: -30px;
+        top: -15px;
+        width: 40px;
+     }
+
+}
+
+@media screen and (max-width: 319px) {
+
+    .link{
+        font-size: 11px;
+    }
+    .paragraphWrapper .logo {
+        left: -30px;
+        top: -20px;
+        width: 43px;
+     }
+     .wrapper{
+        position: absolute;
+        top: 20px;  
+        left: 30px;
+    }
+}
+
