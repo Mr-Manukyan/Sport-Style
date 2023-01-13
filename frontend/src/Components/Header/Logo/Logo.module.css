@@ -3,7 +3,6 @@
     align-items: center;
     justify-items: start;
     background-size: cover; 
-    width: 100%;
 }
 
 
@@ -113,6 +112,7 @@
         position: absolute;
         top: 12px;  
         left: 30px;
+        width: 100%;
     }
 
     .paragraphWrapper{
