@@ -30,7 +30,7 @@ export const ProfileData:React.FC<PropsType> = React.memo(({toggleSideBar,isAuth
         <div className={style.container}>
             <Link to={isAuth ? '/myProfile/edit' : '/auth/login'} className={style.link}>
                 <div className={style.wrapper} onClick={buttonClick}>
-                    <img src={userPhoto ? `http://localhost:5000/${userPhoto}` : userIcon}
+                    <img src={userPhoto ? `https://sport-style.onrender.com/${userPhoto}` : userIcon}
                          className={style.photo}
                          alt='userPhoto' />
                     <span className={style.info}>{userName}</span>

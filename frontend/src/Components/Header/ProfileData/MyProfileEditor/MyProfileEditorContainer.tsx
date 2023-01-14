@@ -28,7 +28,7 @@ const MyProfileEditorContainer = React.memo(() => {
 
 
   const [profileImage, setProfileImage] = useState(
-    userPhoto ? `http://localhost:5000/${userPhoto}` : userIcon
+    userPhoto ? `https://sport-style.onrender.com/${userPhoto}` : userIcon
   )
  
   const onChangeProfilePhoto = (e: any) => {
