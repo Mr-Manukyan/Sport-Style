@@ -6,8 +6,6 @@
     align-items: center;
     flex-direction: column;
     margin-top: 10px;
-
-
 }
 
 .input {
@@ -103,6 +101,13 @@ input::placeholder {
 
     .errorMessage {
         font-size: 9px;
+    }
+    .input {
+        padding: .4em;
+        min-height: 40px;
+        font-size: 10px;
+        letter-spacing: 1px;
+        background-origin: 2px;
     }
 
 }

@@ -3,7 +3,6 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import { useAppDispatch } from '../../../Hooks/hooks'
 import { searchOrdersByPrice } from '../../../Redux/reducers/OrdersHistory-reducer'
 import { SearchOrderByPriceDataType } from '../../../Types/Types'
-import { playBtnSound } from '../../../Utils/helpers/helpers'
 import { NeonAnimationButton } from '../../Buttons/NeonAnimationButton/NeonAnimationButton'
 import { InputAnimation } from '../FormsControls/InputAnimation'
 import style from './SearchByPrice.module.css'
@@ -21,7 +20,6 @@ export const SearchByPrice:React.FC = React.memo( () => {
     } = useForm<SearchOrderByPriceDataType>({ mode: "all" })
 
     const onSubmit: SubmitHandler<SearchOrderByPriceDataType> = (data) => {
-        playBtnSound()
         dispatch( searchOrdersByPrice(data,1 ) )
     }
 

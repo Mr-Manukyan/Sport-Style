@@ -3,27 +3,28 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .bodyWrapper {
     position: relative;
     display: flex;
     width: 70%;
-    max-height: 65%;
+    max-height: 70%;
     flex-direction: column;
     align-self: center;
     z-index: 1;
     background: rgba(0, 0, 0, 0.9);
     border-radius: 20px;
     border: 1px solid #b3c000;
+    margin-top: 10%;
 }
 
 .bodyWrapperEmpty {
     position: relative;
     display: flex;
     width: 60%;
-    min-height: 40%;
+    min-height: 50%;
     flex-direction: column;
     align-self: center;
     z-index: 1;
@@ -68,11 +69,11 @@
     padding: 10px;
     font-size: 14px;
     font-weight: 600;
-    color:#eeff00;
+    color:#f6ff7e;
     text-align: center;
-    border-radius: 10px;
-    background: rgb(0, 135, 0);
-    border: 1px solid #b3c000;
+    border-radius: 5px;
+    background: rgba(43, 101, 43, 0.674);
+    border: 1px solid #f6ff7e;
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
@@ -136,8 +137,8 @@
 .removeAllOrder {
     justify-items: center;
     border: 1px solid #b3c000;
-    background-color: rgb(138, 0, 0);
-    border-radius: 10px;
+    background-color: rgb(142, 36, 36);
+    border-radius: 5px;
     color:white;
     font-size: 14px;
     letter-spacing: 1px;
@@ -198,9 +199,9 @@
         
     }
     .button {
-        min-width: 100px;
-        padding: 10px;
-        font-size: 10px;
+        min-width: 130px;
+        height: 50px;
+        font-size: 12px;
     }
 
     .productType {

@@ -11,17 +11,17 @@
     position: relative;
     display: flex;
     width: 80%;
-    max-height: 68%;
+    max-height: 78%;
     flex-direction: column;
     align-self: center;
     z-index: 1;
     background: rgba(0, 0, 0, 0.9);
     border-radius: 20px;
     border: 1px solid #b3c000;
+    margin-top: 10%;
 }
 
 .bodyWrapperEmpty {
-    /* position: relative; */
     display: flex;
     width: 60%;
     min-height: 40%;
@@ -301,6 +301,7 @@
 
     .bodyWrapper {
         width: 90%;
+        margin-top: 18%;
     }
 }
 

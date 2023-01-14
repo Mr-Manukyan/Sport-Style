@@ -2,7 +2,7 @@ import React from 'react'
 import style from './Button.module.css'
 import { NeonAnimationButton } from '../../Buttons/NeonAnimationButton/NeonAnimationButton'
 import { Link } from 'react-router-dom'
-import { playBtnSound } from '../../../Utils/helpers/helpers'
+
 
 type PropsType = {
    toggleSideBar : (toggle:boolean) => void
@@ -11,7 +11,6 @@ type PropsType = {
 export const Button:React.FC<PropsType> = React.memo( ({toggleSideBar}) => {
 
   const buttonClick = () => {
-          playBtnSound()
           toggleSideBar(false)
   }
 
@@ -23,7 +22,6 @@ export const Button:React.FC<PropsType> = React.memo( ({toggleSideBar}) => {
                   <NeonAnimationButton name = 'Login'
                                       hoverColor = '#1ff403'
                                       textColor = '#1ff403'
-                                      shadow = ' 0 0 2px #1ff403, 0 0 4px #1ff403, 0 0 8px #1ff403, 0 0 30px #1ff403'
                                       animationColor = '#1ff403'
                   />
                 </Link>

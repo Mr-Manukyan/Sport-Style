@@ -1,5 +1,4 @@
 import React from 'react'
-import { playBtnMinusPlus } from '../../../../Utils/helpers/helpers'
 import style from './Size.module.css'
 
 
@@ -15,7 +14,6 @@ export const Size:React.FC<PropsType> = React.memo( ({setShoesSize,sizes}) => {
     const [selectedSize, setSelectedSize] = React.useState(0)
    
     const onChangeSize = (size:number, index: number) => {
-            playBtnMinusPlus()
             setShoesSize(size)
             setSelectedSize(index)
     }

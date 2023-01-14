@@ -53,6 +53,10 @@ export const getOrderHistoryOrderInfoData = (state:AppStateType) => {
     return  state.historyPage.orderInfo
 }
 
+export const getOrdersHistoryIsRemove = (state:AppStateType) => {
+    return  state.historyPage.isRemove
+}
+
 
 
 

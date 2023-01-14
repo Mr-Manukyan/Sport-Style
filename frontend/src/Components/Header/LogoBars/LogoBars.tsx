@@ -2,7 +2,7 @@ import React from 'react'
 import style from './LogoBars.module.css'
 import { FaBars } from 'react-icons/fa'
 import { AiOutlineClose } from 'react-icons/ai'
-import { playBtnMinusPlus } from '../../../Utils/helpers/helpers'
+import { playBtnSound } from '../../../Utils/helpers/helpers'
 
 type PropsType = {
     sidebar: boolean
@@ -12,7 +12,7 @@ type PropsType = {
 export const LogoBars:React.FC<PropsType> = React.memo( ({sidebar,toggleSideBar}) => {
 
     const onClickMenuBarHandler = (toggle:boolean) => {
-                playBtnMinusPlus()
+                playBtnSound()
                 toggleSideBar(toggle)
     }
 

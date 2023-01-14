@@ -5,7 +5,6 @@ type PropsType = {
   name : string
   hoverColor? : string
   textColor? : string
-  shadow? : string
   animationColor? : string
   width? : string
   height? : string
@@ -19,20 +18,17 @@ type PropsType = {
  export const NeonAnimationButton:React.FC<PropsType> = React.memo( (props) => {
     const [hoverColor, setHoverColor] = React.useState('')
     const [color, setColor] = React.useState(props.textColor ? props.textColor : '#03e9f4')
-    const [shadow, setShadow] = React.useState('')
+  
 
 
     const hoverEffectOver = () => {
           setHoverColor(props.hoverColor ? props.hoverColor : '#03e9f4')
           setColor('#050801')
-          setShadow(props.shadow ? props.shadow : 
-                  ` 0 0 2px ${hoverColor}, 0 0 4px ${hoverColor}, 0 0 8px ${hoverColor}, 0 0 30px ${hoverColor}`)
     }
 
     const hoverEffectOut = () => {
           setHoverColor('')
           setColor(props.textColor ? props.textColor : '#03e9f4')
-          setShadow('')
     }
   
 
@@ -42,7 +38,6 @@ type PropsType = {
               style = {{
                         background : hoverColor,
                         color : color,
-                        boxShadow :shadow,
                         width : props.width,
                         height : props.height,
                         margin : props.margin,

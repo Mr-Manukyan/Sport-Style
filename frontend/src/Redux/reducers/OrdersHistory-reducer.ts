@@ -16,6 +16,7 @@ const SET_SEARCH_BY_PRICE_DATA = 'My-Project/OrdersHistory/SET_SEARCH_BY_PRICE_D
 const SET_SEARCH_BY_DATE_DATA = 'My-Project/OrdersHistory/SET_SEARCH_BY_DATE_DATA'
 const SET_ORDERS_HISTORY_TOTAL_PRICE = 'My-Project/OrdersHistory/SET_ORDERS_HISTORY_TOTAL_PRICE'
 const SET_ORDER_INFO = 'My-Project/OrdersHistory/SET_ORDER_INFO'
+const SET_IS_REMOVE = 'My-Project/OrdersHistory/SET_IS_REMOVE'
 
 type initialStateType = typeof initialState;
 
@@ -23,6 +24,7 @@ let initialState = {
   orders: [] as HistoryOrderType[],
   orderInfo : {} as HistoryOrderType,
   isLoading: false,
+  isRemove: false,
   messageInfo: '',
   currentPage: 1,
   pageSize: 5,
@@ -56,6 +58,12 @@ export const ordersHistoryReducer = (state = initialState, action : ActionsTypes
         ...state,
         isLoading: action.isLoading
       }
+
+    case SET_IS_REMOVE:
+        return {
+          ...state,
+          isRemove: action.isRemove
+    }  
 
     case SET_NUMBER_PAGE:
       return {
@@ -129,6 +137,12 @@ export const orderHistoryActions = {
                 type: TOGGLE_IS_LOADING_HISTORY,
                 isLoading
             } as const),
+
+    setIsLoadingRemove : (isRemove : boolean) => 
+    ({
+        type: SET_IS_REMOVE,
+        isRemove
+    } as const),
 
     setCurrentPage : (currentPageNumber : number) => 
             ({
@@ -283,7 +297,7 @@ export const removeOneOrder = (orderID:string,currentPage:number,totalOrdersCoun
                                ): ThunkType => {
   return async (dispatch) => {
     try{
-      dispatch(orderHistoryActions.toggleIsLoadingHistory(true))
+      dispatch(orderHistoryActions.setIsLoadingRemove(true))
       const data = await orders_history_API.removeOneOrder(orderID)
       if(data.resultCode === CodeStatus.ok){
           
@@ -296,7 +310,7 @@ export const removeOneOrder = (orderID:string,currentPage:number,totalOrdersCoun
          if(searchByDateTotalCount){
             dispatch( searchOrdersByDate(searchByDateData, currentPage) )
          }
-         dispatch(orderHistoryActions.toggleIsLoadingHistory(false))
+         dispatch(orderHistoryActions.setIsLoadingRemove(false))
       }
     }catch (err) {
       errorHandler(dispatch,err)
@@ -307,7 +321,7 @@ export const removeOneOrder = (orderID:string,currentPage:number,totalOrdersCoun
 export const removeAllOrdersHistory = (): ThunkType => {
   return async (dispatch) => {
     try{
-      dispatch(orderHistoryActions.toggleIsLoadingHistory(true))
+      dispatch(orderHistoryActions.setIsLoadingRemove(true))
       const data = await orders_history_API.removeAllhistory()
       if (data.resultCode === CodeStatus.ok) {
         dispatch(orderHistoryActions.setOrders([]))
@@ -315,7 +329,7 @@ export const removeAllOrdersHistory = (): ThunkType => {
         dispatch(orderHistoryActions.setOrdersTotalCount(0))
         dispatch(orderHistoryActions.setSearchByDateTotalCount(0))
         dispatch(orderHistoryActions.setSearchByPriceTotalCount(0))
-        dispatch(orderHistoryActions.toggleIsLoadingHistory(false))
+        dispatch(orderHistoryActions.setIsLoadingRemove(false))
       }
     }catch (err) {
       errorHandler(dispatch,err)

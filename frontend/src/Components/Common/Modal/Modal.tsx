@@ -1,8 +1,6 @@
 import React from "react"
 import style from "./Modal.module.css"
 import { motion } from "framer-motion"
-import { playBtnSound, playBtnSound2 } from "../../../Utils/helpers/helpers"
-
 
 
 type PropsType = {
@@ -35,11 +33,9 @@ const animateQuestion = {
 export const Modal: React.FC<PropsType> = React.memo(({ setShowModal,setLogOut }) => {
 
   const goOut = () => {
-    playBtnSound2()
     setLogOut()
   }
   const doNotGoOut = () => {
-    playBtnSound()
     setShowModal(false)
   }
 

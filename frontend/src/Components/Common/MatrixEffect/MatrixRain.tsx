@@ -14,7 +14,7 @@ export const MatrixRain = ({ timeout = 10 }) => {
       let wipeBlock2 = "▉"
       let matrix = "SPORTSTYLE"
       let matrixArr = matrix.split("")
-      let fontSize = 16
+      let fontSize = 13
       if (context) {
         context.font = fontSize + "px monospace"
         let columns = canvas.current.width / fontSize

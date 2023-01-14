@@ -3,6 +3,7 @@ import style from "./ProductCard.module.css"
 import { Size } from "./Size/Size"
 import { PlusMinus } from "./PlusMinus/PlusMinus"
 import { OrderType, ProductType } from "../../../Types/Types"
+import { playBtnSound } from "../../../Utils/helpers/helpers"
 
 type PropsType = {
   product: ProductType
@@ -11,7 +12,7 @@ type PropsType = {
 
 export const ProductCard: React.FC<PropsType> = ({ product, setNewOrder }) => {
 
-  const [image, setImage] = React.useState(`https://sport-style.onrender.com/${product.firstType.src}`)
+  const [image, setImage] = React.useState(`http://localhost:5000/${product.firstType.src}`)
   const [productID, setProductID] = React.useState(product.firstType.id)
   const [quantity, setQuantity] = React.useState(1)
   const [shoesSize, setShoesSize] = React.useState(39)
@@ -19,6 +20,7 @@ export const ProductCard: React.FC<PropsType> = ({ product, setNewOrder }) => {
   const sizes = React.useMemo(() => [39, 40, 41, 42], [shoesSize])
 
   const addNewOrder = () => {
+    playBtnSound()
     setNewOrder({
       id: productID + shoesSize,
       name: product.name,
@@ -30,7 +32,7 @@ export const ProductCard: React.FC<PropsType> = ({ product, setNewOrder }) => {
   }
 
   const onMouseOverHandler = (imageSrc:string, productID:string) => {
-    setImage(`https://sport-style.onrender.com/${imageSrc}`)
+    setImage(`http://localhost:5000/${imageSrc}`)
     setProductID(productID)
   }
 
@@ -38,13 +40,13 @@ export const ProductCard: React.FC<PropsType> = ({ product, setNewOrder }) => {
     <div className={style.cardWrapper}>
       <ul className={style.thumb}>
         <li onMouseOver={() => onMouseOverHandler(product.firstType.src, product.firstType.id)}>
-          <img src={`https://sport-style.onrender.com/${product.firstType.src}`}alt="product"/>
+          <img src={`http://localhost:5000/${product.firstType.src}`}alt="product"/>
         </li>
         <li onMouseOver={() => onMouseOverHandler(product.secondType.src, product.secondType.id)}>
-          <img src={`https://sport-style.onrender.com/${product.secondType.src}`} alt="product"/>
+          <img src={`http://localhost:5000/${product.secondType.src}`} alt="product"/>
         </li>
         <li onMouseOver={() => onMouseOverHandler(product.thirdType.src, product.thirdType.id) }>
-          <img src={`https://sport-style.onrender.com/${product.thirdType.src}`} alt="product" />
+          <img src={`http://localhost:5000/${product.thirdType.src}`} alt="product" />
         </li>
       </ul>
       <div className={style.imgBox}>

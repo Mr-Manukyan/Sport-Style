@@ -1,5 +1,4 @@
 import React from 'react'
-import { playBtnSound } from '../../../Utils/helpers/helpers'
 import style from './ButtonHoverGradients.module.css'
 
 type PropsType = {
@@ -21,7 +20,6 @@ export const ButtonHoverGradients:React.FC<PropsType> = React.memo ( ({
     if(callback){
       callback()
     }
-    playBtnSound()
   }
 
   return (

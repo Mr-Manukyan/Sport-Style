@@ -4,6 +4,8 @@ import { getIsAuth } from '../../Redux/selectors/auth-selector'
 import { AnimatedPage } from '../Common/AnimatedPage/AnimatedPage'
 import { AboutUs } from './AboutUs'
 import { aboutUsData } from './aboutUsDataInfo'
+import style from './AboutUs.module.css'
+import { Footer } from '../Footer/Footer'
 
 
 const AboutUsContainer:React.FC = React.memo(() => {
@@ -12,7 +14,10 @@ const AboutUsContainer:React.FC = React.memo(() => {
 
     return (
       <AnimatedPage>
-         <AboutUs isAuth = {isAuth} infoData = { aboutUsData }/>
+         <div className = {style.aboutUsContainer}>
+           <AboutUs isAuth = {isAuth} infoData = { aboutUsData }/>
+           <Footer />
+       </div>
       </AnimatedPage>
     )
 })

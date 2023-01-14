@@ -5,7 +5,6 @@ import productPhoto1 from '../../Assets/Images/AirMax1.png'
 import productPhoto2 from '../../Assets/Images/AirMax2.png'
 import productPhoto3 from '../../Assets/Images/AirMax3.png'
 import { homeData } from './homeData'
-import { playBtnSound } from '../../Utils/helpers/helpers'
 import { Text3D } from '../Common/Text3D/Text3D'
 
 
@@ -46,7 +45,7 @@ export const Home:React.FC<PropsType> = React.memo( ({isAuth}) => {
             </p>
                 </div>
 
-                <div className = {style.linkWrapper} onClick = {playBtnSound}>
+                <div className = {style.linkWrapper}>
                     <Link className = {style.linkProducts} to = '/products'>
                           {'Our Products'}
                     </Link>

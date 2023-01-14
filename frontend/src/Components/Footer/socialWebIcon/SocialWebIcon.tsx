@@ -3,7 +3,7 @@ import style from './SocialWebIcon.module.css'
 import {CgFacebook} from 'react-icons/cg'
 import { FiLinkedin } from 'react-icons/fi'
 import { FaGithub } from 'react-icons/fa'
-import { playBtnSound2 } from '../../../Utils/helpers/helpers'
+
 
 type PropsType = {
     linkdin:string
@@ -16,7 +16,7 @@ export const SocialWebIcon:React.FC<PropsType> = React.memo ( ({linkdin, github,
         <div className={style.container}>
             
                 <div className = {style.iconWrapper}>
-                    <a target="_blank" onClick={playBtnSound2} href = {facebook} 
+                    <a target="_blank"  href = {facebook} 
                        className = { `${style.link} ${style.linkFacebook}`}
                        rel="noreferrer"
                     >
@@ -25,7 +25,7 @@ export const SocialWebIcon:React.FC<PropsType> = React.memo ( ({linkdin, github,
                 </div>
             
                 <div className = {style.iconWrapper}>
-                    <a target="_blank" onClick={playBtnSound2} href = {github}
+                    <a target="_blank" href = {github}
                        className = {`${style.link} ${style.linkGithub}`}
                        rel="noreferrer"
                     >
@@ -34,7 +34,7 @@ export const SocialWebIcon:React.FC<PropsType> = React.memo ( ({linkdin, github,
                 </div>
 
                 <div className = {style.iconWrapper}>
-                    <a target="_blank" onClick={playBtnSound2} href = {linkdin} 
+                    <a target="_blank" href = {linkdin} 
                       className = {`${style.link} ${style.linkLinkedin}` }
                       rel="noreferrer"
                     >

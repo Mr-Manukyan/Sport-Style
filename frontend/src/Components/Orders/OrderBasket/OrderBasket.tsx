@@ -61,10 +61,9 @@ export const OrderBasket: React.FC<PropsType> = ({
                     </span>
                   </div>
                 </div>
-                <div className={style.buttonWrapper}>
-                  <button className={style.button} onClick = {setNewOrder}>{"Buy Order"}</button>
-                </div>
-            
+                  <div className={style.buttonWrapper}>
+                    <button className={style.button} onClick = {setNewOrder}>{"Buy Order"}</button>
+                  </div>
             </>
           : <p className={style.textInfo}>{"Your basket is empty"}</p>
           }

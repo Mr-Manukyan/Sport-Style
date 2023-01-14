@@ -7,7 +7,7 @@ import { FcSearch } from "react-icons/fc"
 import { BsTrash } from "react-icons/bs"
 import { SearchByPrice } from "../../Common/SearchByPrice/SearchByPrice"
 import { useAppDispatch, useAppSelector } from "../../../Hooks/hooks"
-import { getOrdersHistoryCurrentPage, getOrdersHistoryPageSize, 
+import { getOrdersHistoryCurrentPage, getOrdersHistoryIsRemove, getOrdersHistoryPageSize, 
          getOrdersHistoryPortionNumber, getOrdersHistorysearchByDateTotalCount, 
          getOrdersHistorySearchByPirceTotalCount, getOrdersHistoryTotalOrdersCount 
        } from "../../../Redux/selectors/orders-history-selector"
@@ -15,7 +15,7 @@ import Pagination from "../../Common/Pagination/Pagination"
 import { MyCalendar } from "../../Common/Calendar/Calendar"
 import logoBack from '../../../Assets/Images/arrow.png'
 import { getOrdersHistory } from "../../../Redux/reducers/OrdersHistory-reducer"
-import { playBtnMinusPlus, playBtnSound, playBtnSound2 } from "../../../Utils/helpers/helpers"
+import { Loading } from "../../Common/Loading/Loading"
 
 
 type PropsType = {
@@ -66,8 +66,9 @@ export const OrdersHistoryBasket: React.FC<PropsType> = ({
   const searchByPirceTotalCount = useAppSelector(getOrdersHistorySearchByPirceTotalCount)
   const searchByDateTotalCount = useAppSelector(getOrdersHistorysearchByDateTotalCount)
 
+  const isRemove = useAppSelector(getOrdersHistoryIsRemove)
+
   const goToBackAllOrderHistory = () => {
-    playBtnSound()
     dispatch( getOrdersHistory(currentPage) ) 
   }
 
@@ -79,10 +80,7 @@ export const OrdersHistoryBasket: React.FC<PropsType> = ({
 
           { isSearchByPriceShow && <>
                                      <div className = {style.searchByPriceWrapper} 
-                                          onClick={() => {
-                                                   playBtnSound2()
-                                                   setIsSearchByPriceShow(false)
-                                                  }}>
+                                          onClick={() => setIsSearchByPriceShow(false)}>
                                      </div>
                                      <motion.div className = {style.searchByPriceBody}
                                                  initial = 'initial'
@@ -97,10 +95,7 @@ export const OrdersHistoryBasket: React.FC<PropsType> = ({
           }
           { isSearchByDateShow && <>
                                      <div className = {style.searchByDateWrapper} 
-                                          onClick={() => {
-                                                    playBtnSound2()
-                                                    setIsSearchByDateShow(false)
-                                                  }}>
+                                          onClick={() => setIsSearchByDateShow(false)}>
                                      </div>
                                      <motion.div className = {style.searchByDateBody}
                                                  initial = 'initial'
@@ -131,27 +126,25 @@ export const OrdersHistoryBasket: React.FC<PropsType> = ({
           </div>
           {ordersLength 
           ? <>
-              <div className={style.removeButtonWrapper}>
-                <button className={style.removeAllOrder} onClick={removeAllOrdersHistory}>
-                  {"Remove all orders"}
-                </button>
-              </div>
+                 <div className={style.removeButtonWrapper}>
+                { isRemove 
+                  ? <Loading />
+                  : <button className={style.removeAllOrder} onClick={removeAllOrdersHistory}>
+                      {"Remove all orders"}
+                    </button>
+                }
+                  </div>
+            
                <div className={style.infoContainer}>
                      <div className={style.numberInfo}>{'N'}</div>                             
                         <div className={style.dateInfo}>{'Date'} 
-                          <span  onClick={() => {
-                                           playBtnMinusPlus()
-                                           setIsSearchByDateShow(true)
-                                          }}>
+                          <span  onClick={() => setIsSearchByDateShow(true)}>
                             <FcSearch />
                           </span>
                         </div>
                     <div className={style.timeInfo}>{'Hour'}</div>
                     <div className={style.moneyInfo}>{'Price'}
-                        <span onClick={() => {
-                                        playBtnMinusPlus()
-                                        setIsSearchByPriceShow(true)
-                                      }}>
+                        <span onClick={() => setIsSearchByPriceShow(true) }>
                           <FcSearch />
                         </span>
                     </div>

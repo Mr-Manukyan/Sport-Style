@@ -4,7 +4,6 @@ import { useForm,SubmitHandler } from 'react-hook-form'
 import { LoginValuesType,FormValuesType } from '../../../Types/Types'
 import logo from '../../../Assets/Images/logoLarge.png'
 import Input from '../../Common/FormsControls/Input'
-import { playBtnSound2 } from '../../../Utils/helpers/helpers'
 
 
 
@@ -22,7 +21,6 @@ export const SingIn:React.FC<PropsType> = React.memo ( ({setUserLoginData,isLoad
         } = useForm<FormValuesType>({mode: 'all'})
 
   const onSubmit: SubmitHandler<LoginValuesType> = data => {
-    playBtnSound2()
     setUserLoginData(data)
     reset()
   }
@@ -66,14 +64,12 @@ export const SingIn:React.FC<PropsType> = React.memo ( ({setUserLoginData,isLoad
                    errors = {errors.password} 
                    type = 'password'          
             />
-
-           <div className={isValid ? style.buttonWrapper : style.noValidButtonWrapper}>
-            <button className={style.button} 
-                    // disabled = {isLoading || !isValid}
-                    disabled = {isLoading}
-            >
-              {'Enter'}
-            </button>
+           <div className = {style.buttonContainer}>
+              <div className={isValid ? style.buttonWrapper : style.noValidButtonWrapper}>
+                <button className={style.button} disabled = {isLoading}>
+                  {'Enter'}
+                </button>
+              </div>
           </div>
         </form>
     </div>

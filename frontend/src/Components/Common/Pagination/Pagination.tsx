@@ -31,19 +31,16 @@ const Pagination:React.FC<PropsType> =  ({portionSize = 3,portionNumber, setPort
 
 
     const minusPortionNumber = () => {
-            playBtnSound()
             setPortionNumber(portionNumber - 1)
     }
 
     const plusPortionNumber = () => {
-            playBtnSound()
             setPortionNumber(portionNumber + 1)
     }
 
     const setPageChanged = (p:number) => {
             playBtnSound()
-            onPageChanged(p)
-            
+            onPageChanged(p)     
     }
 
   

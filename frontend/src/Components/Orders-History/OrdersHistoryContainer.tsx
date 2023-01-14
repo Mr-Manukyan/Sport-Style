@@ -17,7 +17,6 @@ import { ModalMessageInfo } from '../Common/ModalMessageInfo/ModalMessageInfo'
 import { AnimatedPage } from '../Common/AnimatedPage/AnimatedPage'
 import { MatrixRain } from '../Common/MatrixEffect/MatrixRain'
 import { OrdersHistory } from './OrdersHistory'
-import { playBtnSound, playBtnSound2 } from '../../Utils/helpers/helpers'
 import { HistoryOrderType } from '../../Types/Types'
 
 
@@ -56,7 +55,6 @@ const OrdersHistoryContiner: React.FC = React.memo(() => {
 
 
   const onPageChanged = (p:number) => {
-    playBtnSound()
     if(totalOrdersCount){
       dispatch( getOrdersHistory(p) )
     }
@@ -75,12 +73,10 @@ const OrdersHistoryContiner: React.FC = React.memo(() => {
   }
 
   const setRemoveAllOrdersHistory = () => {
-    playBtnSound2()
     dispatch( removeAllOrdersHistory() )
   }
 
   const removeOrderById = (orderId:string) => {
-    playBtnSound2()
     dispatch( removeOneOrder(orderId,currentPage,totalOrdersCount,searchByDateTotalCount,
                              searchByPirceTotalCount,searchByPirceData,searchByDateData
                             )
@@ -91,9 +87,9 @@ const OrdersHistoryContiner: React.FC = React.memo(() => {
         return <Navigate to = '/auth/login' />
    }
 
-  if (isLoading) {
-    return <LoadingPage />
-  }
+  // if (isLoading) {
+  //   return <LoadingPage />
+  // }
 
   return (
     <>

@@ -1,23 +1,26 @@
 
 .container {
     width: 100%; 
-    height: 87vh;
+    height:100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     position: relative;
+
 }
 
 .productsContainer {
     width: 100%;
     height: 70%;
+    max-height: 700px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
+
 } 
 
 .productCardContainer{
@@ -42,7 +45,7 @@
 
     .productsContainer {
         width: 100%;
-        height: 75%;
+        height: 68%;
         display: flex;
         justify-content: center;
         align-items: center;

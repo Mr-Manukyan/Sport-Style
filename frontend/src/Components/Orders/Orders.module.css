@@ -1,19 +1,18 @@
 .container {
     width: 100%;
-    min-height: 87vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .orderContainer {
-    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     background: rgba(0, 0, 0, 0.3);
-    max-height: 35vh;
+    max-height: 50vh;
     overflow-y: auto;
   
 } 

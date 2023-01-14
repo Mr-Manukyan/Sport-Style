@@ -8,7 +8,6 @@ import { getOrders } from './Redux/selectors/order-selector'
 import { getIsAppInitialized } from './Redux/selectors/app-selector'
 import { HeaderContainer} from './Components/Header/HeaderContainer'
 import { LoadingPage } from './Components/Common/LoadingPage/LoadingPage'
-import { Footer } from './Components/Footer/Footer'
 import './App.css'
 
 const HomeContainer = React.lazy( () => import('./Components/Home/HomeContainer'))
@@ -71,7 +70,6 @@ export const App = React.memo( () => {
             <Route path="*" element={ <NotFoundPageLazy />} />
           </Routes>
         </AnimatePresence>
-        <Footer/>
         <LoadingPage zIndex = {-1000} />
       </div>
     )

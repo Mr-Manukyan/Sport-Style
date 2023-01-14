@@ -2,7 +2,7 @@ import React from 'react'
 import style from './Basket.module.css'
 import { NavLink } from 'react-router-dom'
 import backpack from '../../../Assets/Images/backpack.png'
-import { playBtnSound } from '../../../Utils/helpers/helpers'
+
 
 type PropsType = {
     toggleSideBar : (toggle: boolean) => void
@@ -12,7 +12,6 @@ type PropsType = {
 export const Basket:React.FC<PropsType> = React.memo(({toggleSideBar,quantityProducts}) => {
 
     const buttonClick = () => {
-         playBtnSound()
          toggleSideBar(false)
     }
 

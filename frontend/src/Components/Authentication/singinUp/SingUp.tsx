@@ -4,7 +4,6 @@ import { useForm,SubmitHandler } from 'react-hook-form'
 import { RegisterValuesType,FormValuesType } from '../../../Types/Types'
 import logo from '../../../Assets/Images/logoLarge.png'
 import Input from '../../Common/FormsControls/Input'
-import { playBtnSound2 } from '../../../Utils/helpers/helpers'
 
 type PropsType = {
   setUserRegisterData : (registerDataValues:RegisterValuesType) => void,
@@ -20,7 +19,6 @@ export const SingUp:React.FC<PropsType> = React.memo ( ({setUserRegisterData,isL
         } = useForm<FormValuesType>({mode: 'all'})
 
   const onSubmit: SubmitHandler<RegisterValuesType> = data => {
-          playBtnSound2()
           setUserRegisterData(data)
           reset()
   }
@@ -66,11 +64,13 @@ export const SingUp:React.FC<PropsType> = React.memo ( ({setUserRegisterData,isL
                    errors = {errors.password}
                    type = 'password'           
             />
-           <div className={isValid ? style.buttonWrapper : style.noValidButtonWrapper}>
-            <button className={style.button} disabled = {isLoading}>
-              {'Enter'}
-            </button>
-          </div>
+              <div className = {style.buttonContainer}>
+                  <div className={isValid ? style.buttonWrapper : style.noValidButtonWrapper}>
+                    <button className={style.button} disabled = {isLoading}>
+                      {'Enter'}
+                    </button>
+                </div>
+              </div>
         </form>
         <div className = {style.logowrapper}>
               <img src = {logo} alt = 'logo' className = {style.logo}/>

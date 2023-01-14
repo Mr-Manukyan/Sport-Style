@@ -8,7 +8,6 @@ import { getAllProducts,getProductsPageSize,getProductsCurrentPage,
        } from '../../Redux/selectors/product-selector'
 import { OrderType } from '../../Types/Types'
 import { orderActions } from '../../Redux/reducers/Orders-reducer'
-import { playBtnSound } from '../../Utils/helpers/helpers'
 import { AnimatedPage } from '../Common/AnimatedPage/AnimatedPage'
 import { ModalMessageInfo } from '../Common/ModalMessageInfo/ModalMessageInfo'
 
@@ -42,7 +41,6 @@ const ProductsContainer: React.FC = React.memo ( () => {
     }
 
     const setNewOrder = (order: OrderType) => {
-            playBtnSound()
             dispatch( orderActions.setOrderAC(order) )
     }
 

@@ -3,7 +3,7 @@ import './Calendar.css'
 import Calendar from 'react-calendar'
 import { searchOrdersByDate } from '../../../Redux/reducers/OrdersHistory-reducer'
 import { useAppDispatch } from '../../../Hooks/hooks'
-import { playBtnSound } from '../../../Utils/helpers/helpers'
+
 
 type PropsType = {
     setIsSearchByDateShow : (show:boolean) => void
@@ -15,7 +15,6 @@ export const MyCalendar:React.FC<PropsType> = React.memo( ({setIsSearchByDateSho
     const dispatch = useAppDispatch()
 
     const onChangeDate = (date:Date) => {
-        playBtnSound()
         setValue(date)
         let dd:number | string = date.getDate();
         let mm:number | string = date.getMonth() + 1; // January is 0!

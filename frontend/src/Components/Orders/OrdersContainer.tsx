@@ -8,7 +8,6 @@ import { getIsAuth } from "../../Redux/selectors/auth-selector"
 import { AnimatedPage } from "../Common/AnimatedPage/AnimatedPage"
 import { MatrixRain } from "../Common/MatrixEffect/MatrixRain"
 import { buyOrder, orderActions } from "../../Redux/reducers/Orders-reducer"
-import { playBtnMinusPlus, playBtnSound2 } from "../../Utils/helpers/helpers"
 import { ModalMessageInfo } from "../Common/ModalMessageInfo/ModalMessageInfo"
 
 
@@ -24,17 +23,14 @@ const OrdersContiner: React.FC = React.memo(() => {
 
 
   const removeAllOrders = () => {
-          playBtnSound2()
           dispatch(orderActions.removeAllOrdersAC())
   }
 
   const removeOrderById = (orderId: string) => {
-          playBtnSound2()
           dispatch(orderActions.removeOrderAC(orderId))
   }
 
   const updateOrderCountById = (orderId: string, orderCount: number) => {
-          playBtnMinusPlus()
           dispatch(orderActions.updateOrderCountAC(orderId, orderCount))
   }
 
@@ -63,7 +59,7 @@ const OrdersContiner: React.FC = React.memo(() => {
   }, 0)
 
   const setNewOrder = () => {
-    playBtnSound2()
+
     if (!isAuth) {
       navigate("/auth/login")
     } else {

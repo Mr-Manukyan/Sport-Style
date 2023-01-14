@@ -2,7 +2,6 @@ import React from "react"
 import style from "./ModalMessageInfo.module.css"
 import { motion } from "framer-motion"
 import { useNavigate } from "react-router-dom"
-import { playBtnSound2 } from "../../../Utils/helpers/helpers"
 
 
 type PropsType = {
@@ -43,7 +42,7 @@ export const ModalMessageInfo: React.FC<PropsType> = React.memo(({
   const navigate = useNavigate();
 
   const goToLogin = () => {
-    playBtnSound2()
+
     if(isSuccess){
       navigate("/auth/login");
       setIsSuccess(false)

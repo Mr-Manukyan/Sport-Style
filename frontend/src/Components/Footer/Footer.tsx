@@ -13,12 +13,6 @@ export const Footer = React.memo(() => {
                           github = 'https://github.com/MK-Manukyan-Karen'
           />
       </div>
-      <div className={style.copyrightIconWrapper}>
-        <FaRegCopyright className={style.copyright} />
-        <span className={style.copyrightText}>
-          {`COPYRIGHT 2022 SPORT STYLE. ALL RIGHTS RESERVED.`}
-        </span>
-      </div>
     </div>
   )
 })

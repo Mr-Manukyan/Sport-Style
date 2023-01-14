@@ -1,8 +1,8 @@
-import React, { MouseEvent } from 'react';
-import style from './OrderHistory.module.css';
-import { BsTrash } from 'react-icons/bs';
-import { HistoryOrderType } from '../../../Types/Types';
-import { playBtnSound } from '../../../Utils/helpers/helpers';
+import React, { MouseEvent } from 'react'
+import style from './OrderHistory.module.css'
+import { BsTrash } from 'react-icons/bs'
+import { HistoryOrderType } from '../../../Types/Types'
+
 
 
 type PropsType = {
@@ -18,9 +18,9 @@ export const OrderHistory:React.FC<PropsType> = React.memo(({ order,removeOrderB
 
 
     let orderDate = new Date(order.date)
-    let dd:string | number = orderDate.getDate();
-    let mm:string | number = orderDate.getMonth() + 1; // January is 0!
-    let yyyy:string | number = orderDate.getFullYear();          
+    let dd:string | number = orderDate.getDate()
+    let mm:string | number = orderDate.getMonth() + 1 // January is 0!
+    let yyyy:string | number = orderDate.getFullYear();         
     if (dd < 10) {
         dd = '0' + dd
     }      
@@ -50,7 +50,6 @@ export const OrderHistory:React.FC<PropsType> = React.memo(({ order,removeOrderB
     }
 
     const setShowOrderAndsetOrderId = () => {
-        playBtnSound()
         setOrderInfo(order)
         showOrderInfo(true)
     }
